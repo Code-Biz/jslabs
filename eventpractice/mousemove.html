@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><div id="moveArea" style="width: 200px; height: 200px; background-color: lightcoral;"></div>
+<script>
+        const moveArea = document.getElementById('moveArea');
+        moveArea.addEventListener('mousemove', function(event) {
+        console.log(`Mouse coordinates - X: ${event.clientX}, Y: ${event.clientY}`);
+  });
+</script>
