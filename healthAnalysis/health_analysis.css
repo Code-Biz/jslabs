@@ -1,0 +1,151 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #343a40;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    display: inline;
+    margin: 0 20px;
+    font-size: 24px;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: inline;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li input[type="text"] {
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+}
+
+nav ul li button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav ul li button:hover {
+    background-color: #218838;
+}
+
+/* Form styles */
+.analysisForm {
+    background: #ffffff;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.analysisForm h1 {
+    color: #007bff;
+    font-size: 28px;
+}
+
+.analysisForm div {
+    margin-bottom: 20px;
+}
+
+.analysisForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #495057;
+}
+
+.analysisForm input[type="text"],
+.analysisForm input[type="number"],
+.analysisForm select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+    color: #495057;
+}
+
+.analysisForm .gender-container {
+    display: flex;
+    align-items: center;
+}
+
+.analysisForm .gender-container label {
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.analysisForm input[type="radio"] {
+    margin-right: 5px;
+}
+
+.analysisForm button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.analysisForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Report and result styles */
+#report, #result {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#report {
+    border-top: 5px solid #007bff;
+}
+
+#result {
+    border-top: 5px solid #28a745;
+}
