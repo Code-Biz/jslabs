@@ -1,0 +1,227 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav {
+    background-color: rgb(9, 53, 78,0.8);
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding around the nav */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center; /* Align items in the center */
+}
+
+nav h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Font size for the logo */
+}
+
+nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Align items in the center */
+}
+
+nav ul li {
+    margin-left: 20px; /* Space between nav items */
+}
+
+nav ul li a {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size for links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Lighter color on hover */
+}
+
+nav ul li input {
+    padding: 5px 10px; /* Padding inside the input */
+    border-radius: 3px; /* Rounded corners */
+    border: none; /* Remove default border */
+    font-size: 16px; /* Font size for input */
+}
+
+nav ul li button {
+    background-color: rgba(253, 245, 127, 0.9);
+    color: rgb(83, 90, 2); /* White text */
+    border: none; /* Remove default border */
+    border-radius: 3px; /* Slightly rounded corners */
+    padding: 8px 20px; /* Padding for size */
+    font-size: 14px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s; 
+    font-weight: bold;/* Smooth background color transition */
+}
+
+nav ul li button:hover {
+    background-color: hsl(46, 94%, 49%); /* Darker blue on hover */
+}
+
+nav ul li button:active {
+    background-color: #004085; /* Even darker blue on click */
+}  
+
+
+.container {
+    background-image: url(./background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+display: flex;
+width: 100%;
+height:100vh;
+padding: 5px 0px;
+}
+
+.leftDiv{
+    display: flex;
+background-color:rgba(255, 255, 255, 0);;
+width: 50%;
+height: 100%;
+margin: 0px 5px 0px 5px;
+padding: 0px 2px 0px 2px;
+}
+.rightDiv{
+    background: rgba(255, 255, 255, 0);    
+    width: 50%;
+    height: 100%;
+    margin: 0px 5px 0px 5px;
+    padding: 0px 2px 0px 2px;
+    align-items: center;
+    
+    }
+
+    
+#iconsDiv1{
+    width: 75px;
+text-align: center;
+}
+
+#vl{
+    background-color: rgba(253, 245, 127, 0.9);
+    height: 225px;
+    width: 2px;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 30px;    
+}
+
+#icons img{
+    margin: 15px auto;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+#textDiv2{
+    padding-left: 10PX;
+}
+#textDiv2 h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:60px;
+    color: rgba(253, 245, 127, 0.9);
+}
+
+#textDiv2 p{
+    padding: 0px 0px 0px 5px;
+    width: 350px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: rgba(252, 250, 233, 1);
+}
+
+#bookNow{
+    background-color: #28a745; /* Green color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 3px; /* Slightly rounded corners */
+    margin-top: 50px;
+    padding: 10px 20px; /* Padding for size */
+    font-size: 14px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center the text */
+    display: inline-block; /* Inline-block for margin */
+
+   }
+
+.container_about{
+    background-image: url(./background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+width: 100%;
+height: 100vh;
+}
+
+.upperDiv-about{
+background-color:rgba(255, 255, 255, 0.3);
+margin: 0px 5px 0px 5px;
+height: 60%;
+padding: 5px 2px 5px 2px;
+}
+.lowerDiv-about{
+background-color:rgba(255, 255, 255, 0.3);;
+margin: 5px 5px 0px 5px;
+height: 35%;
+padding: 5px 2px 5px 2px;
+}
+
+
+
+#cardsListDiv::-webkit-scrollbar {
+    display: none;
+}
+
+#cardsListDiv{
+    background: rgba(150, 148, 148, 0);    
+    width: 70%;
+    height: 100%;
+    overflow-y: scroll;
+    margin: auto;
+    padding: 0px 5px 0px 5px;
+    display: none;
+    }
+
+
+.srchCard {
+    background: #ffffff;
+    margin: 50px 0px 0px 0px;
+    border-radius: 13px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    border-top: 5px solid #007bff;
+    width: 100%;
+    height: auto;
+}
+#srchImg{
+    width:100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.srchCard p,h3{
+    padding: 0px 0px 10px 15px;
+}
+
+.srchCard button{
+    margin:0px 0px 20px 15px;
+    background-color: #28a745; /* Green color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 3px; /* Slightly rounded corners */
+    padding: 10px 20px; /* Padding for size */
+    font-size: 14px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center the text */;
+ }
