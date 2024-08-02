@@ -78,7 +78,8 @@ function searchCondition(){
     resultDiv.innerHTML="";
 
     fetch('health_analysis.json').then(response=>response.json()).then(data=>{
-        const condition = data.conditions.find(anitemwhose=>anitemwhose.name.toLowerCase()===input);
+        //changed anitemWwhose to aConditionWhose
+        const condition = data.conditions.find(aConditionWhose=>aConditionWhose.name.toLowerCase()===input);
 
         if(condition){
             const symptoms= condition.symptoms.join(', ');
