@@ -1,21 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Report</title>
-</head>
-<body>
-    <h1>Weather Report</h1>
-    <form id="weatherForm">
-        <label for="city">Enter City: </label>
-        <input id="city" type="text" name="city">
-        <button type="submit" id="btn">Submit</button>
-    </form>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
 
-    <div id="weatherInfo"></div>
+  <body class="">
+    <div class="w-180">
+      <div class="flex flex-col items-center p-1">
+        <h1
+          class="font-extrabold rounded-md p-4 w-full text-6xl flex justify-center text-sky-500 bg-black/80">
+          Weather Report Card
+        </h1>
+
+        <div
+          class="relative w-180 h-160 mt-5 bg-black rounded-lg flex justify-center">
+          <img
+            src="weather-img-normal.jpg "
+            class="rounded-lg opacity-40 w-full h-full object-cover object-center" />
+
+          <form
+            id="weather-Form"
+            class="absolute z-10 h-16 p-0.5 top-6 w-170 flex items-center justify-between text-2xl border bg-white text-white/90 border-gray-500/30 rounded-full">
+            <!-- <label for="city">Enter City: </label> -->
+
+            <input
+              id="city"
+              type="text"
+              name="city"
+              value=""
+              placeholder="Enter your city"
+              class="h-full pl-6 outline-none placeholder-indigo-500 bg-transparent font-thin text-3xl active:caret-indigo-700 text-indigo-800"
+              required />
+
+            <button
+              id="btn"
+              type="submit"
+              class="bg-indigo-500/80 hover:bg-indigo-600 active:scale-95 transition h-full w-1/4 my-2 rounded-full text-white cursor-pointer">
+              Check
+            </button>
+          </form>
+
+          <div
+            class="absolute hidden z-0 bottom-15 flex-col w-150 h-120 rounded-lg text-white"
+            id="resultCard">
+            <div
+              class="relative bottom-10 w-full h-full flex flex-col items-center">
+              <div class="flex flex-row items-center w-fit h-fit pr-10">
+                <img id="weathericon" class="w-60 h-60" />
+                <h1 id="cityTemp" class="text-7xl mt-10 font-bold"></h1>
+              </div>
+              <h1
+                id="cityHeading"
+                class="absolute top-48 text-7xl z-10 font-bold"></h1>
+            </div>
+            <div
+              class="flex flex-col backdrop-blur-sm w-full rounded-md bg-white/10 border border-white/20">
+              <div class="flex items-center justify-around m-4">
+                <h2
+                  class="bg-black/50 rounded-full text-4xl h-30 w-30 p-6 flex items-center justify-center"
+                  id="headingFeelsLike"></h2>
+                <h2
+                  class="bg-black/50 rounded-full text-4xl h-30 w-30 p-6 flex items-center justify-center"
+                  id="headingHumidity"></h2>
+                <h2
+                  class="bg-black/50 rounded-full text-4xl h-30 w-30 p-6 flex items-center justify-center"
+                  id="headingWindSpeed"></h2>
+              </div>
+              <div class="justify-around flex flex-row rounded-md text-xl m-3">
+                <p>Feels Like (C)</p>
+                <p>Humidity Level (%)</p>
+                <p>Wind Speed (m/s)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="./weather_report.js"></script>
-
-
-</body>
+  </body>
 </html>
