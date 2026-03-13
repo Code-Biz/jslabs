@@ -5,6 +5,7 @@ function showweatherDetails(event) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${place}&appid=${apiKey}&units=metric`;
     //Data and Response can be used instead of data and response, no issue of small letters here but better is to use small letters
     fetch(apiUrl).then(Response => Response.json()).then(Data => {
+
         const iconId = Data.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconId}@2x.png`;
 
@@ -15,8 +16,10 @@ function showweatherDetails(event) {
         document.getElementById("headingHumidity").innerText = `${Data.main.humidity}`;
         document.getElementById("headingWindSpeed").innerText = `${Data.wind.speed}`;
 
-        document.getElementById("resultCard").classList.add('transition-all', 'duration-800');
-        document.getElementById("resultCard").classList.replace('hidden', 'flex');
+        document.getElementById("resultCard").classList.remove("opacity-0");
+        document.getElementById("resultCard").classList.remove("transition-opacity");
+
+
         console.log(Data);
 
     }).catch(error => {
