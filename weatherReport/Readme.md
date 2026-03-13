@@ -3,17 +3,21 @@ An interactive design template that fetches and displays real-time weather data 
 ## 💻 Technologies
 * HTML, JavaScript, and Tailwind CSS v4
 * OpenWeather API (v2.5)
+* 
 ## 🚀 Features
 * **City Search:** Get weather reports for any city globally.
 * **Smooth UI:** Features a blur-to-visibility animation when data loads.
 * **Detailed Stats:** Displays Temp, Humidity, Wind Speed, and "Feels Like" metrics.
+
 ## 🧠 What I Learned
-* **DOM Logic:** Using `classList` methods (`add`, `remove`, `replace`) to swap styles dynamically.
+* **DOM Logic:** Using `document.getElementByID` and `classList` methods (`add`, `remove`, `replace`) to swap styles dynamically.
 * **API Integration:** Handling asynchronous data with the **Fetch API**.
 * **Randomization:** Using `Math.random()` to generate varied UI elements or logic.
 * **Modern CSS:** Managing layouts and themes with the Tailwind CLI.
+
 ## ⚙️ The Process
 I started by building the core logic—a simple input field and a fetch function to pull API data. Once the data was flowing correctly, I used Tailwind CSS to build the visual card. I focused on making the transition from "empty state" to "weather report" feel seamless using JavaScript to manipulate the DOM classes as the data arrived.
+
 ## ⚡ Running the Project
 1. **Clone** the repo.
 2. **Install Tailwind:** `npm install -D tailwindcss @tailwindcss/cli`
