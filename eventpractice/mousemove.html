@@ -11,7 +11,7 @@
 </html><div id="moveArea" style="width: 200px; height: 200px; background-color: lightcoral;"></div>
 <script>
         const moveArea = document.getElementById('moveArea');
-        moveArea.addEventListener('mousemove', function(event) {
+        moveArea.addEventListener('mousemove', function(event) {moveArea.innerHTML= `Mouse Coordinates </br> X: ${event.clientX} </br> Y: ${event.clientY}`;
         console.log(`Mouse coordinates - X: ${event.clientX}, Y: ${event.clientY}`);
   });
 </script>
