@@ -22,5 +22,3 @@ The project started with structuring the data model in a `JSON format` to simula
 3. **Launch:** Open `travel_recommendation.html` in any modern web browser.
 4. **Interact:** Use the search bar to type categories like "country", "beach" or "temple" to see the action
 5. **Tip:** Do not forget to scroll over the cards suggested upon search. 
-
-# 🖼️ Preview
