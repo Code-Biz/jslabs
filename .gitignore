@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 node_modules/
 # Undo last commit + Keep files	    : git reset --soft HEAD~1
 # Undo last commit + Delete files	: git reset --hard HEAD~1
 # Delete commit from middle	        : git rebase -i Head~3 (Find the line for the commit you want to remove and change the word pick to drop)
 # Save the file and close the file
 # Update GitHub after deletion    	: git push --force (as the file you update cloned the commits from remote but no to make changes on remote you hve to execute the push force command )
-=======
-node_modules/
->>>>>>> 45d663496873dceac3dbb78c62b0f8c84e46b9a8
