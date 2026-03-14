@@ -3,7 +3,7 @@ An interactive design template that fetches and displays real-time weather data 
 ## 💻 Technologies
 * HTML, JavaScript, and Tailwind CSS v4
 * OpenWeather API (v2.5)
-* 
+  
 ## 🚀 Features
 * **City Search:** Get weather reports for any city globally.
 * **Smooth UI:** Features a blur-to-visibility animation when data loads.
