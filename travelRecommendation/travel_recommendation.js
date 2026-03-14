@@ -9,7 +9,6 @@ function search() {
     const cardsListDiv = document.getElementById('cardsListDiv');
     cardsListDiv.innerHTML = "";
 
-    document.getElementById('cardsListDiv').style.display = 'block';
     if (input === "country" || input === "countries") {
         document.getElementById('cardsListDiv').style.display = 'block';
         fetchCountries();
