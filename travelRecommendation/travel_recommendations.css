@@ -156,7 +156,8 @@ nav ul li button:active {
   border-radius: 3px; /* Slightly rounded corners */
   margin-top: 30px;
   padding: 20px 60px; /* Padding for size */
-  font-size: 14px; /* Font size */
+  font-size: 16px; /* Font size */
+  font-weight: 800;
   cursor: pointer; /* Pointer cursor on hover */
   text-align: center; /* Center the text */
   display: inline-block; /* Inline-block for margin */
