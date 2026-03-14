@@ -21,4 +21,7 @@ The project started with structuring the data model in a `JSON format` to simula
 2. **Setup:** Ensure the `travel_recommendation_api.json` is in the project root folder.
 3. **Launch:** Open `travel_recommendation.html` in any modern web browser.
 4. **Interact:** Use the search bar to type categories like "country", "beach" or "temple" to see the action
-5. **Tip:** Do not forget to scroll over the cards suggested upon search. 
+5. **Tip:** Do not forget to scroll over the cards suggested upon search.
+
+## 🖼️ Preview
+https://github.com/user-attachments/assets/cc0a8415-a910-4129-938a-4295915fdfd4
