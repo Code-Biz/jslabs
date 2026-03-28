@@ -1,20 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>ToDo List</title>
-</head>
-<body>
-<h1>ToDo List</h1>
-<input type="text" id="taskInput" placeholder="Add a new task">
-<button id="addTaskBtn">Add Task</button>
+<!doctype html>
+<html data-theme="light">
+  <head>
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="flex flex-col items-center h-screen justify-center">
+    <div class="items-center w-180 gap-2 pb-10 card card-border border-black">
+      <div
+        class="card-title mb-10 justify-center p-4 w-full border-b-black border-b">
+        <h1 class="text-4xl font-bold">ToDo List</h1>
+      </div>
 
-<!-- <input type="text" id="searchInput" placeholder="Search..."> -->
-<ul style="list-style-type:none;" id="taskList">
-    <!-- Tasks will be displayed here -->
-</ul>
+      <div class="flex justify-center items-center gap-4">
+        <input
+          class="input input-neutral w-120 focus:input-success focus:caret-success"
+          type="text"
+          id="taskInput"
+          placeholder="Add a new task" />
+        <button
+          id="addTaskBtn"
+          class="btn btn-neutral hover:btn-success text-white w-30">
+          Add Task
+        </button>
+      </div>
 
-<button id="clrCompletedBtn">Clear Completed</button>
-<button id="clrAllBtn">Clear All</button>
-<script src="./todo_list.js"></script>
-</body>
+      <div class="flex justify-center items-center gap-4">
+        <!-- <input type="text" id="searchInput" placeholder="Search..."> -->
+        <ul class="w-120" id="taskList">
+          <!-- Tasks will be displayed here -->
+        </ul>
+        <div class="w-30"></div>
+      </div>
+      <div>
+        <button
+          id="clrCompletedBtn"
+          class="btn btn-outline text-green-400 btn-success font-bold hover:btn-success hover:text-white">
+          Clear Completed
+        </button>
+        <button
+          id="clrAllBtn"
+          class="btn btn-outline text-[#dd1919] btn-error font-bold hover:btn-error hover:text-white">
+          Clear All
+        </button>
+      </div>
+    </div>
+    <script src="./todo_list.js"></script>
+  </body>
 </html>
