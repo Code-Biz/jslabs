@@ -1,43 +1,61 @@
 let testText = "The quick brown fox jumps over the lazy dog.";
 let startTime, endTime;
 
-function startTest(){
-    document.getElementById("inputText").value=testText;
-    document.getElementById("userInput").readOnly=false;
-    document.getElementById("userInput").value="";    
-    document.getElementById("output").innerHTML="";
-    
+function startTest() {
+    document.getElementById("inputText").value = testText;
+    document.getElementById("userInput").readOnly = false;
+    document.getElementById("userInput").value = "";
+    document.getElementById("userInput").focus();
+    document.getElementById("output").innerHTML = "";
+    var outputDiv = document.getElementById("output");
+    outputDiv.style.display = "none";
 
-    startTime=new Date().getTime();
-    var button=document.getElementById("btn");
-        button.innerHTML="End Test";
-        button.onclick=endTest;
+    startTime = new Date().getTime();
+    var button = document.getElementById("btn");
+    button.innerHTML = "End Test";
+    button.onclick = endTest;
 }
 
-function endTest(){
-    endTime=new Date().getTime();
-    document.getElementById("userInput").readOnly=true;
+function endTest() {
+    endTime = new Date().getTime();
+    document.getElementById("userInput").readOnly = true;
 
-    var timeElapsed= (endTime-startTime)/1000;//milliseconds into seconds
-    var userTypedText= document.getElementById("userInput").value;
+    var timeElapsed = (endTime - startTime) / 1000;//milliseconds into seconds
+    var userTypedText = document.getElementById("userInput").value;
 
-    var typedWords=userTypedText.split(/\s+/).filter(function(word){return word !=="";}).length;
-    var wpm=0;
+    var typedWords = userTypedText.split(/\s+/).filter(function (word) { return word !== ""; }).length;
 
-    if(timeElapsed !==0 && !isNaN(typedWords))
-        {
-            wpm = Math.round((typedWords/timeElapsed)*60);
-        }
+    var wpm = 0;
 
-        var outputDiv= document.getElementById("output");
-        outputDiv.innerHTML="<h2>Typing Test Result: </h2>"+"<p>Words Typed: " + typedWords+"</p>" + 
-        "<p>Time Elapsed: " + timeElapsed.toFixed(2)+ " seconds</p>" +
-                "<p>Words Per Minute (WPM): " + wpm + "</p>";
-
-                var button=document.getElementById("btn");
-                button.innerHTML="Start Test";
-                button.onclick=startTest;
+    if (timeElapsed !== 0 && !isNaN(typedWords)) {
+        wpm = Math.round((typedWords / timeElapsed) * 60);
     }
+
+    var outputDiv = document.getElementById("output");
+    outputDiv.style.display = "block"
+    outputDiv.scrollIntoView({
+        behavior: "smooth"
+    })
+    outputDiv.innerHTML = "<h2>Typing Test Result: </h2>" +
+        "<div id=\"resultDiv\">" +
+
+        "<div id=\"leftResultDiv\">" +
+        "<p>Words Typed: </p>" +
+        "<p>Time Elapsed: </p>" +
+        "<p>Words Per Minute (WPM): </p>" +
+        "</div>" +
+
+        "<div id=\"rightResultDiv\">" +
+        "<p>" + typedWords + "</p>" +
+        "<p>" + timeElapsed + "</p>" +
+        "<p>" + wpm + "</p>" +
+
+        "</div>";
+
+    var button = document.getElementById("btn");
+    button.innerHTML = "Start Test";
+    button.onclick = startTest;
+}
 
 //Calculating words per minute (WPM):
 // var userTypedText = document.getElementById("userInput").value; var typedWords = userTypedText.split(/\s+/).filter(function (word) { return word !== "";}).length;

@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* the total-width and total-height of the box will include the border,padding and content height and width. i.e the size of padding and border will also be deducted from the height and width defined.*/
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 100%
+  ); /*The blue color is saturated in top-left corner i.e at 0% or you can say at top if it was 180deg, and has to spread toward bottom-right corner i.e 100% or you can say towards bottom if it was 180deg. Similary the purple color but in opposite direction i.e from bottom-right to top-left or from 100% to 0% i.e bottom-top */
+  font-family: Arial, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem; /*0.25 rem equals 4px so 0.25*10 = 2.5rem and 4*10 equals 40 rem*/
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* X-Offset, Y-Offset, Blur_Radius, Color(red,green,blue,opcity)*/
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #f0f0f0;
+}
+
+label:first-of-type {
+  /*fist-label*/
+  margin-top: 0;
+}
+
+textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+  color: #333;
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  resize: vertical; /*the textarea now can only be resized vertically*/
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #00d4ff;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
+br {
+  display: block;
+}
+
+button {
+  display: block;
+  padding: 12px 30px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(245, 87, 108, 0.3);
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 87, 108, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(245, 87, 108, 0.3);
+}
+
+#output {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100px;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+  color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#output > * {
+  font-weight: bold;
+  color: #fff;
+}
+
+#resultDiv {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+#leftResultDiv > p {
+  text-align: start;
+  padding: 10px 20px;
+  margin: 20;
+  border-bottom: 1px solid #ddd; /* The underline */
+  font-size: 1.1rem;
+}
+#rightResultDiv > p {
+  text-align: right;
+  padding: 10px 20px;
+  margin: 20;
+  border-bottom: 1px solid #ddd; /* The underline */
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  #output {
+    max-width: 100%;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  textarea,
+  button {
+    max-width: 100%;
+  }
+  textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 15px auto;
+  }
+  #output {
+    min-height: 80px;
+    padding: 10px;
+  }
+  body {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #output {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 0.85rem;
+    margin-top: 8px;
+  }
+
+  textarea {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 0.95rem;
+    margin: 12px auto;
+  }
+
+  #output {
+    min-height: 70px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  body {
+    padding: 8px;
+  }
+}
+
+* {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+/*New CSS Concepts Learned: 
+box-sizing:border-box,
+linear-gradient,
+display:(block,inline,block-inline), 
+label:first-of-type,
+textarea: resize: vertical;
+box-shadow: X-Offset, Y-Offset, Blur_Radius, Color(red,green,blue,opcity)
+
+
+/* Smooth transitions */
+/*
+* {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+} */
