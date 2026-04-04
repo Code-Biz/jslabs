@@ -2,7 +2,7 @@
  [![View Folder](https://img.shields.io/badge/VIEW_PROJECT-VanillaCSS_SpeedAnalysis-blue?style=for-the-badge&logo=github)](https://github.com/Code-Biz/Mini_Projects/tree/main/VanillaCSS_SpeedAnalysis)
  [![View Folder](https://img.shields.io/badge/VIEW_PROJECT-DaisyUI_Todolist-blue?style=for-the-badge&logo=github)](https://github.com/Code-Biz/Mini_Projects/tree/main/DaisyUI_Todolist)
  [![View Folder](https://img.shields.io/badge/VIEW_PROJECT-Travelling_LandingPage-blue?style=for-the-badge&logo=github)](https://github.com/Code-Biz/Mini_Projects/tree/main/Travelling_LandingPage_HTML-CSS-JS)
- [![View Folder](https://img.shields.io/badge/VIEW_PROJECT-Weather_Report-blue?style=for-the-badge&logo=github)](https://github.com/Code-Biz/Mini_Projects/tree/main/weatherReport)
+ [![View Folder](https://img.shields.io/badge/VIEW_PROJECT-Weather_Report-blue?style=for-the-badge&logo=github)](https://github.com/Code-Biz/Mini_Projects/tree/main/API_WeatherReport)
 
 ## VanillaCSS_SpeedAnalysis
 https://github.com/user-attachments/assets/74e69d90-c0ca-4ad7-bb9e-8c6ea836dd8a
