@@ -233,11 +233,4 @@ label:first-of-type,
 textarea: resize: vertical;
 box-shadow: X-Offset, Y-Offset, Blur_Radius, Color(red,green,blue,opcity)
 
-
-/* Smooth transitions */
-/*
-* {
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease;
-} */
+*/

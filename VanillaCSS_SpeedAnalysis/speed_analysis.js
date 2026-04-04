@@ -9,6 +9,7 @@ function startTest() {
     document.getElementById("output").innerHTML = "";
     var outputDiv = document.getElementById("output");
     outputDiv.style.display = "none";
+    outputDiv.classList.remove("show");
 
     startTime = new Date().getTime();
     var button = document.getElementById("btn");
@@ -33,9 +34,13 @@ function endTest() {
 
     var outputDiv = document.getElementById("output");
     outputDiv.style.display = "block"
-    outputDiv.scrollIntoView({
-        behavior: "smooth"
-    })
+    outputDiv.classList.add("show");
+    setTimeout(function () {
+        window.scrollTo({
+            top: outputDiv.offsetTop + outputDiv.offsetHeight,
+            behavior: "smooth"
+        });
+    }, 0)
     outputDiv.innerHTML = "<h2>Typing Test Result: </h2>" +
         "<div id=\"resultDiv\">" +
 
