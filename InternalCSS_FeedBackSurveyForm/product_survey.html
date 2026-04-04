@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Brand Feedback</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #f9fafb;
+        padding: 40px 20px;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        border: 2px solid #cfb8fa;
+        border-radius: 10px;
+      }
+
+      .illustration {
+        text-align: center;
+        margin: 30px;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #7c3aed;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        color: #6b7280;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      form {
+        background: white;
+        padding: 32px;
+        border-top: 1px solid #cfb8fa;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: #374151;
+        margin-bottom: 6px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #d1d5db;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: inherit;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #a78bfa;
+        box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.2);
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background: #8b5cf6;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background: #7c3aed;
+      }
+
+      #userInfo {
+        display: none;
+        background: white;
+        padding: 32px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+
+      #userInfo h2 {
+        font-size: 20px;
+        color: #1f2937;
+        margin-bottom: 16px;
+      }
+
+      #userInfo p {
+        font-size: 14px;
+        color: #4b5563;
+        margin-bottom: 8px;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal.active {
+        display: flex;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 400px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: relative;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #9ca3af;
+        padding: 0;
+        width: 32px;
+        height: 32px;
+      }
+
+      .modal-close:hover {
+        color: #374151;
+      }
+
+      .modal h2 {
+        font-size: 24px;
+        color: #7c3aed;
+        margin-bottom: 12px;
+      }
+
+      .modal p {
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 20px;
+      }
+
+      .modal-button {
+        background: #8b5cf6;
+        color: white;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .modal-button:hover {
+        background: #7c3aed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="illustration">
+        <svg
+          width="100"
+          height="100"
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
+            fill="#e0e7ff"
+            stroke="#3b82f6"
+            stroke-width="2" />
+          <path d="M35 40 L50 30 L65 40 L60 55 L40 55 Z" fill="#3b82f6" />
+          <circle cx="45" cy="60" r="3" fill="#3b82f6" />
+          <circle cx="55" cy="60" r="3" fill="#3b82f6" />
+          <path
+            d="M45 70 Q50 75 55 70"
+            stroke="#3b82f6"
+            stroke-width="2"
+            stroke-linecap="round" />
+        </svg>
+      </div>
+
+      <h1>Feedback Form</h1>
+      <p class="subtitle">Share your thoughts about our products</p>
+
+      <form id="feedbackForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="John Doe" required />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" placeholder="30" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="john@example.com"
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="job">Job Title</label>
+          <input type="text" id="job" placeholder="Your position" required />
+        </div>
+
+        <div class="form-group">
+          <label for="designation">Designation</label>
+          <input
+            type="text"
+            id="designation"
+            placeholder="Your designation"
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="productType">Product Type</label>
+          <select id="productType" required>
+            <option value="">Select a product</option>
+            <option value="perfume">Perfume</option>
+            <option value="cream">Cream</option>
+            <option value="oils">Oils</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="feedbackText">Your Feedback</label>
+          <textarea
+            id="feedbackText"
+            placeholder="Share your thoughts..."
+            required></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn">Submit Feedback</button>
+      </form>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div class="modal" id="thankYouModal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <h2>Thank You!</h2>
+        <p>Your feedback has been successfully submitted.</p>
+        <button class="modal-button" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <script src="./product_survey.js"></script>
+  </body>
+</html>
